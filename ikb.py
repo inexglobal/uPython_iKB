@@ -1,5 +1,3 @@
-
-
 from micropython import const
 from machine import ADC,Pin,I2C,PWM
 from time import sleep
