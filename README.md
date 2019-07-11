@@ -1,7 +1,7 @@
 # uPythoniKB
 ไลบรารีการใช้งาน iKB สำหรับภาษา microPython
 ## ผนวกชุดคำสั่งควบคุมการทำงานของ I2C และ Pin
-  from machine Import I2C,Pin	
+  from machine import I2C,Pin	
 ## ผนวกชุดคำสั่งจากไลบรารี ikb
   import ikb       	
 ## ระบุขาของ I2C
