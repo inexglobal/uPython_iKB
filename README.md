@@ -1,11 +1,11 @@
 # uPythoniKB
 ไลบรารีการใช้งาน iKB สำหรับภาษา microPython
 ## ผนวกชุดคำสั่งควบคุมการทำงานของ I2C และ Pin
-from machine Import I2C,Pin	
+  from machine Import I2C,Pin	
 ## ผนวกชุดคำสั่งจากไลบรารี ikb
-import ikb       	
+  import ikb       	
 ## ระบุขาของ I2C
-i2c = I2C(scl = Pin(22),sda=Pin(21),freq=1000000)    
+  i2c = I2C(scl = Pin(22),sda=Pin(21),freq=1000000)    
 ## กำหนดการใช้งาน I2C ของ ikb
 k = ikb.IKB(i2c)        
 ## เริ่มต้นใช้งาน ikb
