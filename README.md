@@ -2,12 +2,20 @@
   ใช้สำหรับภาษา microPython (iKB)[https://inex.co.th/shop/ikb-1-board.html] <br>
   ![](images/iKB.jpg)  
 ### เริ่มต้น
+  * แบบระบุขา i2c
   ```blocks
-  from machine import I2C,Pin	 #ผนวกชุดคำสั่งควบคุมการทำงานของ I2C และ Pin
-  import ikb     #ผนวกชุดคำสั่งจากไลบรารี ikb  	
-  i2c = I2C(scl = Pin(22),sda=Pin(21),freq=1000000)  # ระบุขาของ I2C  
-  k = ikb.IKB(i2c)  #หรือ k = ikb.IKB()  กำหนดการใช้งาน I2C ของ ikb    
+  from machine import I2C,Pin                       #ผนวกชุดคำสั่งควบคุมการทำงานของ I2C และ Pin
+  import ikb                                        #ผนวกชุดคำสั่งจากไลบรารี ikb  	
+  i2c = I2C(scl = Pin(22),sda=Pin(21),freq=1000000) # ระบุขาของ I2C  
+  k = ikb.IKB(i2c)                                  #หรือ k = ikb.IKB() #กำหนดการใช้งาน I2C ของ ikb    
   k.begin() #เริ่มต้นใช้งาน ikb
+ ```
+ * แบบไม่ระบุขา i2c
+  ```blocks
+  from machine import I2C,Pin                       #ผนวกชุดคำสั่งควบคุมการทำงานของ I2C และ Pin
+  import ikb                                        #ผนวกชุดคำสั่งจากไลบรารี ikb  	 
+  k = ikb.IKB()                                     #กำหนดการใช้งาน I2C ของ ikb    
+  k.begin()                                         #เริ่มต้นใช้งาน ikb
  ```
 ## คำสั่งใช้งานเอาต์พุตจากพอร์ตหมายเลข 0
 ```blocks
