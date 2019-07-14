@@ -204,7 +204,13 @@ class IKB():
     if self.con_ipstw==1:
       self.i2c.writeto_mem(self.address,regL,spbk1)
       self.i2c.writeto_mem(self.address,regR,spbk1)
-
+  def ao(self):
+    spbk1=(int(0)).to_bytes(1,'little')
+    regL = 0x21
+    regR = 0x22
+    if self.con_ipstw==1:
+      self.i2c.writeto_mem(self.address,regL,spbk1)
+      self.i2c.writeto_mem(self.address,regR,spbk1)
 
 
 
